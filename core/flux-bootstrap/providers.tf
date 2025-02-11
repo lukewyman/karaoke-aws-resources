@@ -12,7 +12,7 @@ provider "flux" {
     url = "https://github.com/${var.github_owner}/${var.github_repository}.git"
     http = {
       username = "git"
-      password = var.github_token
+      password = data.aws_ssm_parameter.github_token.value
     }
   }
 }
