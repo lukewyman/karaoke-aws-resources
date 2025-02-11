@@ -43,9 +43,3 @@ variable "github_repository" {
   type = string 
   default = "karaoke-gitops-flux"
 }
-
-variable "github_token" {
-  description = "GitHub token"
-  sensitive = true 
-  type = string 
-}
