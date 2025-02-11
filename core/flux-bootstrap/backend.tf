@@ -1,4 +1,8 @@
 terraform {
+  backend "local" {}  
+}
+
+terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"

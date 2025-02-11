@@ -19,5 +19,5 @@ provider "flux" {
 
 provider "github" {
   owner = var.github_owner 
-  token = var.github_token
+  token = data.aws_ssm_parameter.github_token.value
 }

@@ -1,3 +1,8 @@
+variable "app_name" {
+  description = "Name of application"
+  type        = string
+}
+
 variable "aws_region" {
   type = string 
   description = "AWS region to which to deploy resources"
