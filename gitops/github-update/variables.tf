@@ -66,9 +66,9 @@ variable "kustomize_patches" {
   }
 }
 
-variable "templates_dir" {
-  type = string 
-  description = "Directory for kustomize templates"
-  default = "templates"
-}
+# variable "templates_dir" {
+#   type = string 
+#   description = "Directory for kustomize templates"
+#   default = "templates"
+# }
 
