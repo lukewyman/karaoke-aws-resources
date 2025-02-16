@@ -17,9 +17,9 @@ variable "github_repository_name" {
 }
 
 variable "kustomize_patches" {
-  type = map(string)
+  type = map(any)
   default = {
-    mongodb_named_service = {
+    "mongodb-named-service" = {
       github_file = "named-services/mongodb-svc.yaml"
       template = "named-service.tftpl"
       vars = {
@@ -28,7 +28,7 @@ variable "kustomize_patches" {
       }
     }
 
-    postgresql_named_service = {
+    "postgresql-named_service" = {
       github_file = "named-services/postgresql-svc.yaml"
       template = "named-service.tftpl"
       vars = {
@@ -37,7 +37,7 @@ variable "kustomize_patches" {
       }
     }
 
-    song_library_service_account = {
+    "song-library-service_account" = {
       github_file = "service-accounts/song-library-sa.yaml"
       template = "service-account.tftpl"
       vars = {
@@ -46,7 +46,7 @@ variable "kustomize_patches" {
       }
     }
 
-    singers_service_account = {
+    "singers-service-account" = {
       github_file = "service-accounts/singers-sa.yaml"
       template = "service-account.tftpl"
       vars = {
@@ -55,7 +55,7 @@ variable "kustomize_patches" {
       }
     }
 
-    rotations_service_acccount = {
+    "rotations-service-acccount" = {
       github_file = "service-accounts/rotations-sa.yaml"
       template = "service-account.tftpl"
       vars = {
