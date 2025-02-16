@@ -17,6 +17,7 @@ variable "github_repository_name" {
 }
 
 variable "kustomize_patches" {
+  type = map(string)
   default = {
     mongodb_named_service = {
       github_file = "named-services/mongodb-svc.yaml"
