@@ -1,4 +1,4 @@
-module "karaoke-vpc" {
+module "karaoke_vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.17.0"
 
@@ -9,6 +9,7 @@ module "karaoke-vpc" {
   private_subnets = var.vpc_private_subnets
 
   database_subnets                   = var.vpc_database_subnets
+  create_database_subnet_group       = true
   create_database_subnet_route_table = var.vpc_create_database_subnet_route_table
 
   enable_nat_gateway = var.vpc_enable_nat_gateway
